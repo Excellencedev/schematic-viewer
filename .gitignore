@@ -14,5 +14,5 @@ storybook-static
 .tool-versions
 .DS_Store
 cosmos-export
-.env
 lib/workers/spice-simulation.worker.blob.js
+config.bat
