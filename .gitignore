@@ -10,9 +10,8 @@ storybook-static
 .deeper
 .aider*
 *.log
-.vscode
 .tool-versions
 .DS_Store
 cosmos-export
-.env
 lib/workers/spice-simulation.worker.blob.js
+config.bat
