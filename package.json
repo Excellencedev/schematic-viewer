@@ -1,14 +1,14 @@
 {
   "name": "@tscircuit/schematic-viewer",
-  "version": "2.0.56",
+  "version": "2.0.57",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "start": "cosmos",
-    "build:webworker": "tsup --config tsup-webworker.config.ts",
-    "build:blob-url": "bun scripts/build-worker-blob-url.ts",
-    "build": "bun run build:webworker && bun run build:blob-url && tsup-node ./lib/index.ts --dts --format esm --sourcemap",
-    "build:site": "cosmos-export",
+    "start": "node init && cosmos",
+    "build:webworker": "node init && tsup --config tsup-webworker.config.ts",
+    "build:blob-url": "node init && bun scripts/build-worker-blob-url.ts",
+    "build": "node init && bun run build:webworker && bun run build:blob-url && tsup-node ./lib/index.ts --dts --format esm --sourcemap",
+    "build:site": "node init && cosmos-export",
     "vercel-build": "bun run build:webworker && bun run build:blob-url && bun run build:site",
     "format": "biome format --write .",
     "format:check": "biome format ."
